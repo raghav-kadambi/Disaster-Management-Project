@@ -11,17 +11,25 @@ disaster_severity = {
 }
 
 def update_graph():
+    # Create legend
+    plt.style.use('ggplot')
+    plt.show() 
+    plt.scatter([], [], c='green', label='Low Severity')  # Dummy plot for legend
+    plt.scatter([], [], c='yellow', label='Medium Severity')  # Dummy plot for legend
+    plt.scatter([], [], c='red', label='High Severity')  # Dummy plot for legend
+    plt.legend(title='Disaster Severity', loc='upper right')
+    
     while True:
         if clients:
-            plt.show() 
-            plt.style.use('ggplot')  
-
+           
             statuses = list(clients.values())
             client_ids = list(clients.keys())
             colors = ['green' if status['severity'] == 1 else 'yellow' if status['severity'] == 2 else 'red' for status in statuses]
 
             # Display severity on the y-axis and plot
             plt.scatter(range(len(client_ids)), [status['severity'] for status in statuses], c=colors, s=100)
+            
+          
 
             # Label each point with the corresponding location
             for i, client_id in enumerate(client_ids):
@@ -32,6 +40,7 @@ def update_graph():
             plt.title("Disaster status")
             plt.xlabel("Location")
             plt.ylabel("Disaster Severity")
+          
             plt.pause(1)
 
 def is_port_in_use(port):
