@@ -14,6 +14,8 @@ def update_graph():
     while True:
         if clients:
             plt.show() 
+            plt.style.use('ggplot')  
+
             statuses = list(clients.values())
             client_ids = list(clients.keys())
             colors = ['green' if status['severity'] == 1 else 'yellow' if status['severity'] == 2 else 'red' for status in statuses]
