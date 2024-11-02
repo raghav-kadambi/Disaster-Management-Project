@@ -2,4 +2,6 @@ git add .
 echo "Enter the commit message"
 read message
 git commit -m"$message"
-git push time
+echo "Enter the branch"
+read branch
+git push origin "$branch"
