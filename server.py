@@ -12,7 +12,7 @@ disaster_severity = {
 
 def update_graph():
     # Create legend
-    plt.style.use('ggplot')
+    plt.style.use('dark_background')
     plt.show() 
     plt.scatter([], [], c='green', label='Low Severity')  # Dummy plot for legend
     plt.scatter([], [], c='yellow', label='Medium Severity')  # Dummy plot for legend
