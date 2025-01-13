@@ -1,6 +1,8 @@
+# Server code
 import socket
 import matplotlib.pyplot as plt
 import threading
+
 
 clients = {}  # Dictionary to hold client information
 disaster_severity = {

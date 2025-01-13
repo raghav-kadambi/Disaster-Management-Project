@@ -1,10 +1,11 @@
+# Client code
 import socket
 from datetime import datetime
 
 def start_client(server_host='localhost', server_port=12345):
     with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as client_socket:
         client_socket.connect((server_host, server_port))
-        print("Welcome to the Disaster Reporting System!")
+        print("Welcome to the Disaster Reporting System !!!")
 
         while True:
             severity = input("Enter the severity of the disaster (1: Low, 2: Medium, 3: High): ")
