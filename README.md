@@ -48,7 +48,4 @@ Follow the prompts to enter severity level and location details.
    - Yellow: Medium
    - Red: High
 
-## License
-This project is licensed under the MIT License.
-
 
